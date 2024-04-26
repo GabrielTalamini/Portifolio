@@ -1,0 +1,328 @@
+/****************************Reset CSS****************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/****************************Global Styles****************************/
+body {
+  font-family: "Arial", sans-serif; /* Alterei a fonte para Arial */
+  line-height: 1.6;
+  background: #121212; /* Cor de fundo escura */
+  color: #ffffff; /* Cor do texto branco */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/****************************Header Styles****************************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 35%, rgba(255,255,255,1) 100%);
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+header nav {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+header nav a {
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #fff; /* Azul mais escuro */
+  color: #000;
+}
+
+
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#whatsapp-button img {
+  width: 60px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+
+/****************************Section Styles ****************************/
+.perfil, .linguagens, .curriculo, .contato {
+  padding: 100px 0;
+}
+
+.perfil .container, .linguagens .container, .curriculo .container, .contato .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+/****************************Perfil Section****************************/
+.perfil {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 35%, rgba(255,255,255,1) 100%);
+  padding: 300px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+}
+
+/****************************Estilos para a imagem de perfil****************************/
+.profile-picture img {
+  width: 300px; /* Garante que a imagem ocupe toda a largura do contêiner */
+  height: 300px; /* Mantém a proporção da imagem */
+  border-radius: 50%; /* Borda arredondada para tornar a imagem circular */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  object-fit: cover; /* Mantém a imagem dentro do contêiner e corta o excesso */
+  margin-right: 100px;
+}
+
+/****************************Estilo de texto Sobre Mim****************************/
+.texto-sobre-mim {
+  max-width: 50%; /* Largura máxima do texto */
+  text-align: left; /* Alinhamento do texto */
+}
+
+.texto-sobre-mim h2 {
+  font-size: 2rem; /* Tamanho do título */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  color: #fff; /* Cor do título */
+  text-align: center;
+}
+
+.texto-sobre-mim p {
+  font-size: 1.3rem; /* Tamanho do texto */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  color: #fff; /* Cor do texto */
+}
+
+/* Adicionado: Estilo de link */
+.texto-sobre-mim a {
+  color: #007bff; /* Cor do link */
+  text-decoration: underline; /* Sublinhado */
+}
+
+.texto-sobre-mim a:hover {
+  color: #0056b3; /* Cor do link ao passar o mouse */
+}
+
+
+@media (max-width: 768px) {
+  .perfil .container {
+    flex-direction: column;
+  }
+
+  .profile-picture,
+  .texto-sobre-mim {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}
+
+
+/****************************Linguagens Section****************************/
+.linguagens {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 35%, rgba(255,255,255,1) 100%);
+  padding: 350px 0;
+}
+
+.linguagens h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.icons img {
+  width: 120px;
+  height: 120px;
+  margin: 0 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+/****************************Curriculo Section****************************/
+.curriculo {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 35%, rgba(255,255,255,1) 100%);
+  padding: 300px 0;
+}
+
+.curriculo h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.curriculo ul {
+  list-style: none;
+  text-align: left;
+}
+
+.curriculo ul li {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/****************************Contato Section****************************/
+.contato {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 35%, rgba(255,255,255,1) 100%);
+  padding: 100px 0;
+}
+
+.contato h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;;
+}
+
+.contato p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.contato {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 35%, rgba(255,255,255,1) 100%);
+  color: #ffffff; /* Cor do texto */
+  padding: 50px 0; /* Espaçamento interno superior e inferior */
+}
+
+.container {
+  width: 80%; /* Largura do container */
+  margin: 0 auto; /* Centralizar o container na página */
+}
+
+
+/* projetos */
+
+.projeto {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 35%, rgba(255,255,255,1) 100%);
+  padding: 400px 0;
+}
+
+.projeto h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.projeto ul {
+  list-style: none;
+  text-align: left;
+}
+
+.projeto ul li {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: left;
+  text-align: center;
+}
+
+
+
+/* Formulario */
+
+
+form {
+  padding: 100px; /* Espaçamento interno */
+  border-radius: 10px; /* Borda arredondada */
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Espaçamento inferior entre os grupos de formulário */
+}
+
+label {
+  display: block; /* Mostrar os rótulos em uma nova linha */
+  margin-bottom: 5px; /* Espaçamento inferior entre os rótulos e os campos de entrada */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 500px; /* Largura total do campo de entrada */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 10px; /* Borda arredondada */
+  background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo do campo de entrada com transparência */
+  color: #ffffff; /* Cor do texto */
+}
+
+textarea {
+  min-height: 100px; /* Altura mínima da área de texto */
+}
+
+button[type="submit"] {
+  padding: 10px 30px; /* Espaçamento interno */
+  border: none; /* Remover borda */
+  border-radius: 20px; /* Borda arredondada */
+  background-color: #4CAF50; /* Cor de fundo do botão */
+  color: #ffffff; /* Cor do texto */
+  cursor: pointer; /* Mostrar cursor ao passar por cima */
+  transition: background-color 0.3s; /* Transição suave da cor de fundo */
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049; /* Mudar a cor de fundo do botão ao passar por cima */
+}
+
+
+footer{
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 35%, rgba(255,255,255,1) 100%);
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
